@@ -1,0 +1,19 @@
+﻿@model Microsoft.AspNetCore.Identity.IdentityRole
+<h1>Create Role</h1>
+@if (ViewBag.errorMsg != null)
+{
+    @ViewBag.errorMsg
+}
+<form method="post" asp-action="Edit" asp-controller="ManageRole">
+
+    <div class="form-group">
+
+        <label for="rolename"> Name</label>
+        <input type="hidden" class="form-control" asp-for="Id" name="rolename" id="rolename" aria-describedby="emailHelp" placeholder="Enter Role name">
+       
+        <input type="text" class="form-control" asp-for="Name"   aria-describedby="emailHelp" placeholder="Enter Role name">
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
